@@ -44,6 +44,6 @@ if stroka and stroka[0] != "-":
     if res[0] == "+": # если самый первый знак "+", то убираем его и записываем без него
         output = res[1:]
 else:
-    instance = "no solution" # если функция вывела None
+    output = "no solution" # если функция вывела None
 with open('laba1.txt', 'a') as f: # записываем ответ в исходный файл, не удаляя из него содержимое
     f.write('\n' + output)
