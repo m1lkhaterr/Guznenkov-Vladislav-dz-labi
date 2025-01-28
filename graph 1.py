@@ -35,10 +35,10 @@ y_kas = kas(x_kas, x0, pr_x0)
 x_norm = np.linspace(x0-1, x0+1, 1000)
 y_norm = norm(x_norm, x0, pr_x0)
 
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(9, 6))
 
 
-plt.subplot(2, 2, 1) # y = f(x)
+plt.subplot(3, 1, 1) # y = f(x)
 plt.plot(x, y, label="y = f(x)")
 
 plt.plot(x_kas, y_kas, label="kas", color="black") # касательная
@@ -51,12 +51,12 @@ plt.scatter(x_mx, y_mx, color='red')
 plt.grid()
 plt.title("y = f(x)")
 
-plt.subplot(2, 2, 2) # y = f'(x)
+plt.subplot(3, 1, 2) # y = f'(x)
 plt.plot(x, f_pr1, label="y = f\'(x)")
 plt.grid()
 plt.title("y = f\'(x)")
 
-plt.subplot(2, 2, 3) # y = f"(x)
+plt.subplot(3, 1, 3) # y = f"(x)
 plt.plot(x, f_pr2, label="y = f\"(x)")
 plt.grid()
 plt.title("y = f\"(x)")
