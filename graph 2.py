@@ -24,15 +24,19 @@ f_pr2 = np.gradient(f_pr1, x)
 
 x0 = float(input('x0 = '))
 pr_x0 = np.interp(x0, x, f_pr1)
+
 x_kas = np.linspace(x0 - 2, x0 + 2, 1000)
 y_kas = kas(x_kas, x0, pr_x0)
+
 x_norm = np.linspace(x0 - 2, x0 + 2, 1000)
 y_norm = norm(x_norm, x0, pr_x0)
 
 graph = plt.subplot(1,1,1)
 graph.plot(x, y, label='y = f(x)', color='red')
+
 kas_line, = plt.plot(x_kas, y_kas, label='kas', color='black')
 norm_line, = plt.plot(x_norm, y_norm, label='norm', color='black')
+
 point_x0, = plt.plot(x0, f(x0), 'o', label='x0', color='black')
 plt.grid()
 
